@@ -1,0 +1,135 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="InvalidModelStateTitle" xml:space="preserve">
+        <value>One or more fields of the request are not valid.</value>
+    </data>
+    <data name="UnexpectedServerError" xml:space="preserve">
+        <value>Internal server error</value>
+    </data>
+    <data name="UnexpectedErrorProcessingRequest" xml:space="preserve">
+        <value>The request could not be completed due to an unexpected error.</value>
+    </data>
+    <data name="OrderTrackingCodeAlreadyExists" xml:space="preserve">
+        <value>There is already a disbursement order registered with this order tracking code.</value>
+    </data>
+    <data name="DisbursementOrderNotSaved" xml:space="preserve">
+        <value>The disbursement order could not be saved.</value>
+    </data>
+    <data name="DisbursementOrderRequestInvalid" xml:space="preserve">
+        <value>The disbursement order data is not valid.</value>
+    </data>
+    <data name="OrderTrackingCodeRequired" xml:space="preserve">
+        <value>orderTrackingCode is mandatory.</value>
+    </data>
+    <data name="AffiliateStoreIdRequired" xml:space="preserve">
+        <value>affiliateStoreId is mandatory.</value>
+    </data>
+    <data name="ScheduledFromRequired" xml:space="preserve">
+        <value>scheduledFrom is mandatory.</value>
+    </data>
+    <data name="ScheduledToRequired" xml:space="preserve">
+        <value>scheduledTo is mandatory.</value>
+    </data>
+    <data name="TransferCapAmountRequired" xml:space="preserve">
+        <value>transferCapAmount is mandatory.</value>
+    </data>
+    <data name="TransferCapCurrencyCodeRequired" xml:space="preserve">
+        <value>transferCapCurrencyCode is mandatory and cannot be blank.</value>
+    </data>
+    <data name="TransferCapCurrencyCodeTooLong" xml:space="preserve">
+        <value>transferCapCurrencyCode cannot have more than 10 characters.</value>
+    </data>
+    <data name="UserRequired" xml:space="preserve">
+        <value>user is mandatory.</value>
+    </data>
+    <data name="IdentifierMustNotBeEmpty" xml:space="preserve">
+        <value>orderTrackingCode and affiliateStoreId must be valid non-empty UUIDs.</value>
+    </data>
+    <data name="ScheduledToMustBeAfterScheduledFrom" xml:space="preserve">
+        <value>scheduledTo must be a date after scheduledFrom.</value>
+    </data>
+    <data name="TransferCapAmountMustNotBeNegative" xml:space="preserve">
+        <value>transferCapAmount must be zero or a positive value.</value>
+    </data>
+    <data name="StatusNotSupported" xml:space="preserve">
+        <value>status only accepts Queued, Processed, Cancelled or Failed.</value>
+    </data>
+    <data name="UserRequiredWithMaxLength" xml:space="preserve">
+        <value>user is mandatory and cannot have more than 20 characters.</value>
+    </data>
+    <data name="RemarksTooLong" xml:space="preserve">
+        <value>remarks cannot have more than 85 characters.</value>
+    </data>
+    <data name="CreateDisbursementOrderSummary" xml:space="preserve">
+        <value>Register a disbursement order</value>
+    </data>
+    <data name="CreateDisbursementOrderDescription" xml:space="preserve">
+        <value>Registers a disbursement order for an affiliate store. The order tracking code must be unique and the status is Queued when it is not sent.</value>
+    </data>
+    <data name="CreateDisbursementOrderResponse201" xml:space="preserve">
+        <value>Disbursement order registered.</value>
+    </data>
+    <data name="CreateDisbursementOrderResponse400" xml:space="preserve">
+        <value>The request is malformed or breaks a business rule.</value>
+    </data>
+    <data name="CreateDisbursementOrderResponse409" xml:space="preserve">
+        <value>The order tracking code is already registered.</value>
+    </data>
+    <data name="CreateDisbursementOrderResponse500" xml:space="preserve">
+        <value>The disbursement order could not be saved.</value>
+    </data>
+    <data name="CreateDisbursementOrderResourceSchema" xml:space="preserve">
+        <value>Fields needed to register a disbursement order.</value>
+    </data>
+    <data name="DisbursementOrderResourceSchema" xml:space="preserve">
+        <value>Registered disbursement order.</value>
+    </data>
+    <data name="IdPropertyDescription" xml:space="preserve">
+        <value>Identifier generated by the database.</value>
+    </data>
+    <data name="OrderTrackingCodePropertyDescription" xml:space="preserve">
+        <value>Openpay reference (UUID) of the order; unique.</value>
+    </data>
+    <data name="AffiliateStoreIdPropertyDescription" xml:space="preserve">
+        <value>UUID of the affiliate store.</value>
+    </data>
+    <data name="ScheduledFromPropertyDescription" xml:space="preserve">
+        <value>Start date of the execution schedule (yyyy-MM-dd).</value>
+    </data>
+    <data name="ScheduledToPropertyDescription" xml:space="preserve">
+        <value>End date of the execution schedule (yyyy-MM-dd); after scheduledFrom.</value>
+    </data>
+    <data name="TransferCapAmountPropertyDescription" xml:space="preserve">
+        <value>Maximum amount to transfer; zero or positive.</value>
+    </data>
+    <data name="TransferCapCurrencyCodePropertyDescription" xml:space="preserve">
+        <value>Currency code of the maximum amount.</value>
+    </data>
+    <data name="StatusPropertyDescription" xml:space="preserve">
+        <value>Queued (default), Processed, Cancelled or Failed.</value>
+    </data>
+    <data name="UserPropertyDescription" xml:space="preserve">
+        <value>Operator user that registers the order; up to 20 characters.</value>
+    </data>
+    <data name="RemarksPropertyDescription" xml:space="preserve">
+        <value>Optional remarks; up to 85 characters.</value>
+    </data>
+    <data name="UpdatedAtPropertyDescription" xml:space="preserve">
+        <value>Date and time of the last update of the record.</value>
+    </data>
+</root>
