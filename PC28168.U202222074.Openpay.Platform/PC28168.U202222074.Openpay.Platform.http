@@ -1,0 +1,65 @@
+@HostAddress = http://localhost:5128
+
+### 201 Created
+POST {{HostAddress}}/api/v1/disbursement-orders
+Content-Type: application/json
+Accept-Language: en-US
+
+{
+  "orderTrackingCode": "3f2504e0-4f89-11d3-9a0c-0305e82c3301",
+  "affiliateStoreId": "8c1b2f5a-7d3e-4c2a-9b1f-1a2b3c4d5e6f",
+  "scheduledFrom": "2026-11-20",
+  "scheduledTo": "2026-11-30",
+  "transferCapAmount": 1500.50,
+  "transferCapCurrencyCode": "PEN",
+  "user": "operator01",
+  "remarks": "First settlement of the month"
+}
+
+### 409 Conflict (same order tracking code again)
+POST {{HostAddress}}/api/v1/disbursement-orders
+Content-Type: application/json
+Accept-Language: es-PE
+
+{
+  "orderTrackingCode": "3f2504e0-4f89-11d3-9a0c-0305e82c3301",
+  "affiliateStoreId": "8c1b2f5a-7d3e-4c2a-9b1f-1a2b3c4d5e6f",
+  "scheduledFrom": "2026-11-20",
+  "scheduledTo": "2026-11-30",
+  "transferCapAmount": 1500.50,
+  "transferCapCurrencyCode": "PEN",
+  "status": "Processed",
+  "user": "operator01"
+}
+
+### 400 Bad Request (scheduledTo is not later than scheduledFrom)
+POST {{HostAddress}}/api/v1/disbursement-orders
+Content-Type: application/json
+Accept-Language: es-PE
+
+{
+  "orderTrackingCode": "a4b7c1d2-0000-4000-8000-000000000001",
+  "affiliateStoreId": "8c1b2f5a-7d3e-4c2a-9b1f-1a2b3c4d5e6f",
+  "scheduledFrom": "2026-11-30",
+  "scheduledTo": "2026-11-30",
+  "transferCapAmount": 100,
+  "transferCapCurrencyCode": "USD",
+  "user": "operator01"
+}
+
+### 400 Bad Request (negative amount, user too long)
+POST {{HostAddress}}/api/v1/disbursement-orders
+Content-Type: application/json
+Accept-Language: en-US
+
+{
+  "orderTrackingCode": "a4b7c1d2-0000-4000-8000-000000000002",
+  "affiliateStoreId": "8c1b2f5a-7d3e-4c2a-9b1f-1a2b3c4d5e6f",
+  "scheduledFrom": "2026-11-20",
+  "scheduledTo": "2026-11-30",
+  "transferCapAmount": -5,
+  "transferCapCurrencyCode": "USD",
+  "user": "a-very-long-operator-user-id"
+}
+
+###
